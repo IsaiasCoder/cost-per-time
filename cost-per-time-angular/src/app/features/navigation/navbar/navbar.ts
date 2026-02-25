@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
-
+import { SwapButton } from '../../theme/swap-button/swap-button';
 @Component({
   selector: 'app-navbar',
-  imports: [],
+  imports: [SwapButton],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
 })
-export class Navbar {
-
-}
+export class Navbar {}
