@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-form',
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './form.css',
 })
 export class Form {
-
+  activeTab = signal<'existing' | 'custom'>('custom');
 }

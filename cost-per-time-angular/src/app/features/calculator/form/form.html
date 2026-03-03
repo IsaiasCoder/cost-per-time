@@ -1,1 +1,31 @@
-<p>form works!</p>
+<div class="card-body gap-4 p-5">
+    <div role="tablist" class="tabs tabs-box">
+        <a role="tab" class="tab" [class.tab-active]="activeTab() === 'existing'" (click)="activeTab.set('existing')">Existing Product</a>
+        <a role="tab" class="tab" [class.tab-active]="activeTab() === 'custom'" (click)="activeTab.set('custom')">Custom Product</a>
+    </div>
+    @if (activeTab() === 'custom') {
+        <label class="floating-label">
+            <span>Name</span>
+            <input type="text" placeholder="Name" class="input input-bordered w-full" />
+        </label>
+        <label class="floating-label">
+            <span>Price</span>
+            <input type="number" placeholder="Price" class="input input-bordered w-full" />
+        </label>
+        <label class="floating-label">
+            <span>Date of purchase</span>
+            <input type="date" placeholder="Date" class="input input-bordered w-full" />
+        </label>
+        <button class="btn btn-primary w-full">Calculate</button>
+    } @else {
+        <label class="floating-label">
+            <span>Name</span>
+            <input type="number" placeholder="Name" class="input input-bordered w-full" />
+        </label>
+        <label class="floating-label">
+            <span>Date</span>
+            <input type="date" placeholder="Date" class="input input-bordered w-full" />
+        </label>
+        <button class="btn btn-primary w-full">Calculate</button>
+    }
+</div>

@@ -7,3 +7,10 @@
 @plugin "daisyui" {
     themes: pastel --default, dark --prefersdark;
 }
+
+@utility input {
+    &:focus {
+        outline: none;
+        @apply shadow-md shadow-primary/40;
+    }
+}
